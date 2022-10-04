@@ -1,10 +1,8 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                bat 'set'
-            }
+    agent any {
+        steps ('Deploy') {
+            retry (3) {
+                bat ''
         }
     }
 }
