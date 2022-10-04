@@ -4,10 +4,10 @@ pipeline {
             stage ('Deploy') {
                 steps {
                     retry (3) {
-                        bat './name.sh'
+                        bat 'name.bat'
                     }
                     timeout (time: 3, unit: 'MINUTES') {
-                        bat './next.sh'
+                        bat 'next.bat'
                     }
                 }
             }
