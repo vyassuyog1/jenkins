@@ -1,5 +1,5 @@
 pipeline {
-    agent any {
+    agent any 
         stage ('Deploy') {
             steps {
                 retry (3) {
@@ -10,5 +10,4 @@ pipeline {
                 }
             }
         }   
-    }
 }
