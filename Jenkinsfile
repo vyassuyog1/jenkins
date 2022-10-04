@@ -1,12 +1,12 @@
 pipeline {
     agent any 
         environment {
-            USERNAME =  dummy_creds('username')
+            DUMMY_CREDS =  credentials('dummy_creds')
         }
         stages {
             stage ('Deploy') {
                 steps {
-                    echo 'username is ${USERNAME}'
+                    echo 'username is ${DUMMY_CREDS_USR} password is ${DUMMY_CREDS_PSW}'
                 }
             }
         }
