@@ -1,6 +1,6 @@
 pipeline {
     agent any 
-        stage ('Deploy') {
+        stages ('Deploy') {
             steps {
                 retry (3) {
                     bat './name.sh'
