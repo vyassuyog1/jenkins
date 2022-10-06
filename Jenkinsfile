@@ -6,7 +6,7 @@ pipeline {
         stages {
             stage ('Deploy') {
                 steps {
-                    bat 'conda activate 8x81 && python test.py'
+                    bat 'pytest test.py --junitxml=build/reports/demo/result.xml'
                    
                 }
             }
