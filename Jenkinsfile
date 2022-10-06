@@ -6,7 +6,7 @@ pipeline {
         stages {
             stage ('Deploy') {
                 steps {
-                    echo 'xyz'
+                    echo 'username is ${DUMMY_CREDS_USR} password is ${DUMMY_CREDS_PSW}'
                 }
             }
         }
@@ -14,6 +14,8 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            junit 'build/reports/**/*.xml'
+            
         }
     }
 }
