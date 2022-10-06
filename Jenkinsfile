@@ -6,8 +6,8 @@ pipeline {
         stages {
             stage ('Deploy') {
                 steps {
-                    bat 'conda activate 8x81'
-                    bat 'python test.py'
+                    bat 'conda activate 8x81 && python test.py'
+                   
                 }
             }
         }
