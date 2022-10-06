@@ -1,7 +1,7 @@
 pipeline {
     agent any 
         environment {
-            DUMMY_CREDS =  credentials('dummy_creds')
+            DUMMY_CREDS =  credentials('dummy creds')
         }
         stages {
             stage ('Deploy') {
