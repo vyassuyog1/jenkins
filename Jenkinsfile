@@ -6,7 +6,7 @@ pipeline {
         stages {
             stage ('Deploy') {
                 steps {
-                    echo 'username is ${DUMMY_CREDS_USR} password is ${DUMMY_CREDS_PSW}'
+                    echo 'xyz'
                 }
             }
         }
